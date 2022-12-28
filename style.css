@@ -1,0 +1,408 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #fff;
+  --text-color-primary: #fff;
+  --text-color-secondary: #f7f1f1;
+  --background-secondary: #c8e7df;
+  --btn-color-primary: #1aaf91;
+  --btn-color-dark: #1d3853;
+  --btn-color-light: #fff;
+  --btn-text-color-dark: #fff;
+  --btn-text-color-light: #1d3853;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/** mobile **/
+
+nav {
+  padding: 2vh 5vh;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background: #23c687;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 30px;
+}
+nav h4 {
+  color: var(--text-color-primary);
+  font-size: 1.1rem;
+}
+nav .items {
+  display: none;
+  grid-column: 3/8;
+}
+
+ul {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+section.head {
+  position: relative;
+  padding: 10vh 5vh 5vh 5vh;
+  width: 100%;
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+}
+
+section.head .top {
+  display: block;
+}
+
+section.head .left h1 {
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: var(--text-color-primary);
+}
+
+section.head .left p {
+  margin-top: 8px;
+  color: var(--text-color-secondary);
+}
+
+section.head .buttons {
+  margin-top: 15px;
+}
+
+section.head .left .buttons .dark {
+  border: var(--btn-color-dark) solid 1px;
+  border-radius: 5px;
+  background-color: var(--btn-color-dark);
+  padding: 8px 12px;
+  color: var(--text-color-primary);
+  display: block;
+}
+
+section.head .left .buttons .light {
+  border: var(--btn-color-light) solid 1px;
+  border-radius: 5px;
+  background-color: var(--btn-color-light);
+  padding: 8px 12px;
+  margin: 6px 0px;
+  color: var(--btn-text-color-light);
+}
+
+section.head .left .buttons span {
+  font-size: 1rem;
+}
+
+.img-right {
+  width: 100%;
+}
+
+section.head div.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+section.head div.wave svg {
+  position: relative;
+  display: block;
+  width: calc(127% + 1.3px);
+  height: 97px;
+}
+
+section.head div.wave .shape-fill {
+  fill: #ffffff;
+}
+
+/* services sections */
+section.services {
+  width: 100%;
+  padding: 24px;
+  background: var(--background-secondary);
+}
+
+section.services h6,
+.services-title,
+.services-sub {
+  text-align: center;
+}
+
+.services h6 {
+  color: var(--btn-text-color-light);
+}
+
+.services-title {
+  color: var(--btn-text-color-light);
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+
+.services-sub {
+  margin: 15px 12px;
+  font-size: 0.8rem;
+}
+
+/* grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+}
+
+/** cards **/
+section.services .grid {
+  margin-top: 30px;
+}
+
+.card {
+  grid-column: span 8;
+  padding: 15px;
+  z-index: 2;
+  background-color: white;
+  border: #fff solid 1px;
+  border-radius: 10px;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card .img-card {
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.card .img-card img {
+  width: 100%;
+  align-self: center;
+}
+
+.card .title-card {
+  margin: 12px 0px;
+  color: var(--btn-text-color-light);
+  border-bottom: #1aaf91 solid 3px;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+/* statistics */
+section.statistics {
+  /* background-color: #17c967; */
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+  color: var(--text-color-primary);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+section.statistics::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: inherit;
+  transform: skew(0, -2deg);
+  transform-origin: top left;
+}
+
+section.statistics::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: inherit;
+  transform: skew(0, -2deg);
+  transform-origin: bottom right;
+}
+
+section.statistics .title {
+  margin-top: 10px;
+}
+
+section.statistics p {
+  margin: 10px 0px 24px 0;
+  font-size: 0.9rem;
+}
+
+section.statistics .grid {
+  margin-top: 10px;
+  display: block;
+}
+
+section.statistics .grid .items {
+  margin-top: 20px;
+}
+
+section.statistics .grid .items-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* why us */
+section.why-us {
+  padding: 2vh;
+}
+
+.flex {
+  padding: 5vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section.why-us .flex .left .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section.why-us .left img {
+  width: 100%;
+  border: #fff solid 1px;
+  border-radius: 8px;
+}
+
+/** slider ratings **/
+section.slider {
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+  position: relative;
+  padding: 8vh 0;
+}
+
+section.slider h4,
+section.slider p {
+  color: var(--text-color-primary);
+  text-align: center;
+}
+
+section.slider h4 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+section.slider p {
+  margin: 12px 0;
+  font-size: 0.85em;
+}
+
+section.slider .grid {
+  margin-top: 24px;
+}
+
+section.slider .card {
+  margin: 15px 20px;
+  text-align: center;
+}
+
+section.slider .card img {
+  width: 40px;
+}
+
+section.slider .card h4,
+section.slider .card p {
+  color: var(--btn-text-color-light);
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  background-color: #23c687;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.prev img,
+.next img {
+  width: 100%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  margin-top: 3vh;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/** tablet **/
