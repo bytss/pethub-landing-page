@@ -108,6 +108,7 @@ nav {
 .logo {
   grid-column: 1/3;
   display: flex;
+  gap: 2px;
   align-items: center;
 }
 
@@ -119,7 +120,7 @@ nav {
   grid-column: 8/9;
 }
 
-.nav-menu .bx {
+.nav-menu .img {
   width: 30px;
   height: 40px;
   align-self: center;
