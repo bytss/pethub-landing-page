@@ -138,20 +138,11 @@ nav .items {
   grid-column: 3/8;
 }
 
-nav ul {
-  display: flex;
-  /* justify-content: space-between; */
-}
-
 section.head {
   position: relative;
-  padding: 10vh 5vh 5vh 5vh;
+  padding: 10vh 3vh;
   width: 100%;
   background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
-}
-
-section.head .top {
-  display: block;
 }
 
 section.head .left h1 {
@@ -171,6 +162,10 @@ section.head .buttons {
 
 section.head .left .buttons span {
   font-size: 1rem;
+}
+
+section.head .right {
+  margin-top: 20px;
 }
 
 .img-right {
@@ -218,7 +213,6 @@ section.services h6,
 .services-title {
   color: var(--btn-text-color-light);
   font-size: 1.3rem;
-  margin-top: 3px;
 }
 
 .services-sub {
