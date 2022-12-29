@@ -20,6 +20,34 @@
   font-family: "Poppins", sans-serif;
 }
 
+/** buttons **/
+button.dark {
+  border: var(--btn-color-dark) solid 1px;
+  border-radius: 5px;
+  background-color: var(--btn-color-dark);
+  padding: 8px 12px;
+  color: var(--text-color-primary);
+  display: block;
+}
+
+button.light {
+  border: var(--btn-color-light) solid 1px;
+  border-radius: 5px;
+  background-color: var(--btn-color-light);
+  padding: 8px 12px;
+  margin: 6px 0px;
+  color: var(--btn-text-color-light);
+}
+
+button.gradient {
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+  border: linear-gradient(180deg, #23c687 0%, #1aaf91 100%) solid 1px;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 6px 0px;
+  color: var(--btn-color-light);
+}
+
 /** mobile **/
 
 nav {
@@ -83,24 +111,6 @@ section.head .left p {
 
 section.head .buttons {
   margin-top: 15px;
-}
-
-section.head .left .buttons .dark {
-  border: var(--btn-color-dark) solid 1px;
-  border-radius: 5px;
-  background-color: var(--btn-color-dark);
-  padding: 8px 12px;
-  color: var(--text-color-primary);
-  display: block;
-}
-
-section.head .left .buttons .light {
-  border: var(--btn-color-light) solid 1px;
-  border-radius: 5px;
-  background-color: var(--btn-color-light);
-  padding: 8px 12px;
-  margin: 6px 0px;
-  color: var(--btn-text-color-light);
 }
 
 section.head .left .buttons span {
@@ -270,27 +280,35 @@ section.statistics .grid .items-title {
   font-weight: 700;
 }
 
-/* why us */
+/* section why us */
 section.why-us {
-  padding: 2vh;
+  background: var(--background-secondary);
+  padding: 5vh 2vh;
 }
 
-.flex {
-  padding: 5vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+section.why-us h4 {
+  font-size: 1.2em;
+  color: var(--btn-text-color-light);
 }
 
-section.why-us .flex .left .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+section.why-us p {
+  font-size: 0.85em;
+  margin-bottom: 3vh;
 }
 
-section.why-us .left img {
+.pet-bg {
+  text-align: center;
+}
+
+.pet-bg img {
   width: 100%;
+  object-fit: contain;
   border: #fff solid 1px;
-  border-radius: 8px;
+  border-radius: 48% 52% 70% 30% / 30% 59% 41% 70%;
+}
+
+section.why-us .right {
+  margin-top: 2vh;
 }
 
 /** slider ratings **/
