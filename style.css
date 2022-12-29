@@ -29,7 +29,6 @@ button.dark {
   background-color: var(--btn-color-dark);
   padding: 8px 12px;
   color: var(--text-color-primary);
-  display: block;
 }
 
 button.light {
@@ -63,7 +62,6 @@ section.services .grid {
 }
 
 .card {
-  grid-column: span 8;
   padding: 15px;
   z-index: 2;
   background-color: white;
@@ -138,33 +136,34 @@ nav .items {
   grid-column: 3/8;
 }
 
-section.head {
+/* header section */
+section.header {
   position: relative;
   padding: 10vh 3vh;
   width: 100%;
   background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
 }
 
-section.head .left h1 {
+section.header .left h1 {
   font-weight: bold;
   font-size: 1.9rem;
   color: var(--text-color-primary);
 }
 
-section.head .left p {
+section.header .left p {
   margin-top: 8px;
   color: var(--text-color-secondary);
 }
 
-section.head .buttons {
+section.header .buttons {
   margin-top: 15px;
 }
 
-section.head .left .buttons span {
+section.header .left .buttons span {
   font-size: 1rem;
 }
 
-section.head .right {
+section.header .right {
   margin-top: 20px;
 }
 
@@ -172,7 +171,7 @@ section.head .right {
   width: 100%;
 }
 
-section.head div.wave {
+section.header div.wave {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -182,14 +181,14 @@ section.head div.wave {
   transform: rotate(180deg);
 }
 
-section.head div.wave svg {
+section.header div.wave svg {
   position: relative;
   display: block;
   width: calc(127% + 1.3px);
   height: 97px;
 }
 
-section.head div.wave .shape-fill {
+section.header div.wave .shape-fill {
   fill: #ffffff;
 }
 
@@ -204,6 +203,10 @@ section.services h6,
 .services-title,
 .services-sub {
   text-align: center;
+}
+
+section.services .card {
+  grid-column: span 8;
 }
 
 .services h6 {
@@ -259,10 +262,6 @@ section.statistics::after {
   transform-origin: bottom right;
 }
 
-section.statistics .title {
-  margin-top: 10px;
-}
-
 section.statistics p {
   margin: 10px 0px 24px 0;
   font-size: 0.9rem;
@@ -295,7 +294,7 @@ section.why-us h4 {
 
 section.why-us p {
   font-size: 0.85em;
-  margin-bottom: 3vh;
+  margin: 3vh, 0;
 }
 
 .pet-bg {
@@ -313,44 +312,44 @@ section.why-us .right {
   margin-top: 2vh;
 }
 
-/** slider ratings **/
-section.slider {
+/** slider ratings/ testimonials **/
+section.testimonials {
   background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
   position: relative;
-  padding: 8vh 0;
+  padding: 5vh 0;
 }
 
-section.slider h4,
-section.slider p {
+section.testimonials h4,
+section.testimonials p {
   color: var(--text-color-primary);
   text-align: center;
 }
 
-section.slider h4 {
+section.testimonials h4 {
   font-size: 1.3em;
   font-weight: 500;
 }
 
-section.slider p {
-  margin: 12px 0;
+section.testimonials p {
+  margin: 1.2vh 0;
   font-size: 0.85em;
 }
 
-section.slider .grid {
+section.testimonials .grid {
   margin-top: 24px;
 }
 
-section.slider .card {
+section.testimonials .card {
   margin: 15px 20px;
   text-align: center;
 }
 
-section.slider .card img {
+section.testimonials .card img {
   width: 40px;
 }
 
-section.slider .card h4,
-section.slider .card p {
+section.testimonials .card h4,
+section.testimonials .card p {
   color: var(--btn-text-color-light);
   text-align: center;
 }
@@ -455,4 +454,22 @@ footer h4 {
   font-size: 1.2em;
 }
 
-/** tablet **/
+/** small tablet **/
+@media screen and (min-width: 620px) {
+  /* section header */
+  section.header .top {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+  }
+  section.header .grid-items {
+    grid-column: span 4;
+  }
+  .right.grid-items img {
+    width: 120%;
+  }
+  /* services sections */
+  section.services .card {
+    grid-column: span 4;
+  }
+}
