@@ -17,6 +17,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   font-family: "Poppins", sans-serif;
 }
 
@@ -136,16 +138,9 @@ nav .items {
   grid-column: 3/8;
 }
 
-ul {
+nav ul {
   display: flex;
   /* justify-content: space-between; */
-}
-
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
 }
 
 section.head {
@@ -434,6 +429,36 @@ section.slider .card p {
   to {
     opacity: 1;
   }
+}
+
+/* trivia section */
+section.trivia {
+  background: var(--background-secondary);
+}
+
+/* footer section */
+footer {
+  background: linear-gradient(180deg, #23c687 0%, #1aaf91 100%);
+  color: white;
+  padding: 2vh;
+}
+
+div.cols:first-of-type {
+  margin-top: 10px;
+}
+
+div.cols ~ .cols {
+  margin-top: 20px;
+}
+
+footer p,
+div.socials,
+footer ul {
+  margin-top: 1.2vh;
+}
+
+footer h4 {
+  font-size: 1.2em;
 }
 
 /** tablet **/
