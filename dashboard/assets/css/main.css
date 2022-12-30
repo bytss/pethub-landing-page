@@ -296,6 +296,7 @@ body {
   overflow-y: scroll;
 }
 
+/* home section card */
 .card {
   grid-column: span 8;
   background-color: #fff;
@@ -319,6 +320,10 @@ body {
   margin-right: 16px;
 }
 
+.card .title {
+  font-size: 16px;
+}
+
 .sidebar.active ~ .home_content {
   z-index: 100;
   width: calc(100% - 240px);
@@ -339,3 +344,36 @@ body {
 .sidebar .nav_list li input {
   color: var(--white-color);
 }
+
+/* section list */
+section.list {
+  margin-top: 20px;
+}
+
+/* appointment table */
+.appointment-table {
+  margin-top: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-color: white solid 2px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #23c687;
+  color: white;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+/* tr:hover {
+  background: #f3f3f7;
+  transition: all 0.1s ease-in-out;
+} */
